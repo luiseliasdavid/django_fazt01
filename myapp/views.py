@@ -1,9 +1,13 @@
 from django.http import HttpResponse, JsonResponse
+from django.shortcuts import get_object_or_404, render
 from .models import Project,Task
 
 # Create your views here.
 def index(request):
-    return HttpResponse("<h2> index page </h2>")
+    title = 'welcome to django curse'
+    return render(request,"index.html", {
+        'title': title
+    })
 
 
 def hello(request,username):
@@ -12,14 +16,18 @@ def hello(request,username):
 
 def about(request):
     """ruta about"""
-    return HttpResponse("<h2> About </h2>")
+    username= 'Luis David'
+    return render(request,"about.html",{
+        'username':username
+    })
 
 def projects(request):
     """ consulta a la base de datos """
     projects = list(Project.objects.values())
-    return JsonResponse(projects, safe=False)
+    return render(request,"projects.html",{
+        'projects':projects
+    })
 
-def tasks(request, id):
-    task = Task.objects.get(id=id)
-    print('hola que tal ',task)
-    return HttpResponse('task: %s' % task.title)
+def tasks(request):
+    #task = get_object_or_404(Task, title=title)
+    return render(request,"tasks.html")
