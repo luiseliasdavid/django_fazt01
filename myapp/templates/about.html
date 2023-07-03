@@ -4,6 +4,8 @@
     <title>Acerca de nuestro proyecto Django</title>
 </head>
 <body>
+    {% extends 'base.html' %}
+    {% block content %}
     <h1>Acerca de nuestro proyecto Django</h1>
     
     <p>¡Bienvenido a la página de "Acerca de" de nuestro proyecto Django!</p>
@@ -26,5 +28,6 @@
     
     <p>¡Gracias por visitar la página de "Acerca de" de nuestro proyecto!</p>
     <p> Creado por {{username}}</p>
+    {% endblock %}
 </body>
 </html>

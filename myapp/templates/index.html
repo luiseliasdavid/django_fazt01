@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Bienvenido a mi proyecto Django</title>
-</head>
-<body>
+
+    {% extends 'base.html' %}
+    {% block content %}
     <h1>{{title}}</h1>
     
     <p>¡Hola! Gracias por visitar nuestro proyecto Django.</p>
@@ -13,5 +10,5 @@
     <p>No dudes en ponerte en contacto con nosotros si tienes alguna pregunta o necesitas ayuda.</p>
     
     <p>¡Gracias de nuevo y que tengas una gran experiencia en nuestro proyecto!</p>
-</body>
-</html>
+    {% endblock %}
+    

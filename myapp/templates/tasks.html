@@ -4,9 +4,22 @@
     <title>Tasks</title>
 </head>
 <body>
+    {% extends 'base.html' %}
+    {% block content %}
     <h1>Tasks</h1>
-    <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, quia eos? Iusto vero enim, consectetur accusantium error modi. Error ipsa aut autem praesentium? In, illo voluptatibus natus a facilis ipsam sed adipisci iure voluptates debitis nulla maxime! Libero odit eos consequuntur dolore corporis maiores culpa laudantium autem aspernatur velit fugit itaque, laboriosam molestias excepturi cumque nemo, sunt labore praesentium, tenetur ad nesciunt incidunt? Iste, dicta sunt corrupti aliquam quas mollitia. Esse consequuntur cumque sed doloribus, iusto fuga odio quae quasi, sit cum in excepturi sequi reiciendis ducimus. Rerum deleniti sunt illum inventore. Totam, quos ratione? A fugit totam itaque iste, eligendi saepe nihil velit nesciunt dolorum, possimus nemo quam aperiam praesentium. Nulla dignissimos veritatis, doloremque ipsa possimus temporibus reiciendis exercitationem. Nam in at fugit! Debitis quis perferendis consequuntur quo temporibus ullam alias blanditiis officia fugiat quidem dolores natus voluptas sunt, officiis sint quasi non. Odit repellat suscipit labore. Quisquam labore esse voluptas nisi! Voluptatibus recusandae, autem voluptates ipsam officiis molestias nisi quia! Iure necessitatibus odit pariatur dicta, tempora nostrum alias nisi, ex iusto fugiat quasi aliquid optio repudiandae eligendi modi eum dolorum, blanditiis eveniet assumenda veniam facilis. Ducimus, dignissimos facere nam adipisci saepe nobis asperiores similique veritatis quas ipsam necessitatibus?
-    </p>
+    {%for task in tasks%}
+    
+    <h3>{%if task.done == False%}🕐{% else %}✅{% endif %} {{task.title}} </h3>
+    <p> {{ task.description }} </p>
+    <p> {{task.project}} </p>
+    <button>
+        delete
+    </button>
+    <button>
+        ✅ Done
+    </button>
+    
+    {% endfor %}
+    {% endblock %}
 </body>
 </html>

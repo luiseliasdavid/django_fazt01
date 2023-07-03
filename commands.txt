@@ -1,0 +1,27 @@
+levantar servidor:
+python manage.py runserver
+
+pass del admin:
+user: luis
+admin pass : 123456
+
+actulizar cambios en base de datos:
+python manage.py makemigrations
+python manage.py migrate
+
+activar entorno virtual git bash:
+source venv/Scripts/activate
+
+generar archivo de requerimientos del projecto:
+pip freeze > requirements.txt
+
+instalar los requerimientos del projecto:
+pip install -r requirements.txt
+
+jinja commands (python dentro de html):
+https://jinja.palletsprojects.com/en/3.1.x/
+
+
+
+
+
