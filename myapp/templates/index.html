@@ -1,7 +1,12 @@
 
     {% extends 'base.html' %}
+
+    {% load static %}
+
     {% block content %}
     <h1>{{title}}</h1>
+
+    <img src="{% static 'pic.jpg' %}" alt="picture" width="500px">
     
     <p>¡Hola! Gracias por visitar nuestro proyecto Django.</p>
     

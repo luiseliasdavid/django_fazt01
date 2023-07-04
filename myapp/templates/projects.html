@@ -9,9 +9,9 @@
     <h1>Projects</h1>
     
     {% for project in projects %}
-    
-    <h3> {{project.name}} </h3>
-    
+     <div class="card">
+     <a href="{% url 'project_detail' project.id %}" > <h3> {{project.name}} </h3> </a>
+    </div>
     {% endfor %}
     
     {% endblock %}

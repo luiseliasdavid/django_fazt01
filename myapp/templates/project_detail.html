@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1> {{project}} </h1>
+
+{% for task in tasks %}
+
+ <article class="card">
+    <h3> {{task.title}} </h3>
+ </article>
+
+{% endfor %}
+
+{% endblock %}
